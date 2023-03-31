@@ -42,7 +42,8 @@ function App() {
           },
           uiConfig: {
             theme: "dark",
-            loginMethodsOrder: ["github", "google"],
+            // loginMethodsOrder: ["github", "google"],
+            loginMethodsOrder: ["google", "facebook", "apple", "linkedin"],
             defaultLanguage: "en",
             appLogo:
               "https://titanconnect-assets.s3.ap-southeast-1.amazonaws.com/Social_Profile_TC+(background).jpg", // Your App Logo Here
@@ -56,9 +57,11 @@ function App() {
           },
           adapterSettings: {
             whiteLabel: {
-              name: "Your app Name",
-              logoLight: "https://web3auth.io/images/w3a-L-Favicon-1.svg",
-              logoDark: "https://web3auth.io/images/w3a-D-Favicon-1.svg",
+              name: "Titan Wallet",
+              logoLight:
+                "https://titanconnect-assets.s3.ap-southeast-1.amazonaws.com/Social_Profile_TC+(background).jpg",
+              logoDark:
+                "https://titanconnect-assets.s3.ap-southeast-1.amazonaws.com/Social_Profile_TC+(background).jpg",
               defaultLanguage: "en",
               dark: true, // whether to enable dark mode. defaultValue: false
             },
@@ -118,7 +121,7 @@ function App() {
           web3AuthNetwork: "cyan",
           chainConfig: {
             chainNamespace: CHAIN_NAMESPACES.EIP155,
-            chainId: "0x1",
+            chainId: "0x13881", //"0x89" Polygon, "0x13881" Mumbai, "0x1" Ethereum, "0x5" Goreli
             rpcTarget: "https://rpc.ankr.com/eth", // This is the public RPC we have added, please pass on your own endpoint while creating an app
           },
         });
